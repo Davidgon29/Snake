@@ -53,14 +53,14 @@ def move():
 
 def moveFood():
     # Genera una posicion al azar para la comida
-    food.x = + randrange(-10, 11, 10)
-    food.y = + randrange(-10, 11, 10)
-    # la comiga se mueve hasta que no llegue al limite
+    food.x += randrange(-10, 20, 10)
+    food.y += randrange(-10, 20, 10)
+    # la comida se mueve hasta que no llegue al limite 
     if not inside(food):
         food.x = randrange(-15, 15) * 10
         food.y = randrange(-15, 15) * 10
-
-    ontimer(moveFood, 500)
+    
+    ontimer(moveFood, 1000)
 
 setup(420, 420, 370, 0)
 hideturtle()
